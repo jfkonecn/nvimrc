@@ -13,13 +13,17 @@ vim.call('plug#begin')
 -- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 Plug('neovim/nvim-lspconfig')
 
--- dotnet
--- https://github.com/OmniSharp/omnisharp-vim
--- Plug('OmniSharp/omnisharp-vim')
-
--- fuzzy
+-- fuzzy finder
 -- https://github.com/nvim-telescope/telescope.nvim
 Plug('nvim-lua/plenary.nvim')
 Plug('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
+
+-- lsp manager
+Plug('williamboman/mason.nvim')
+
+
+Plug('morhetz/gruvbox')
+
+Plug('gruvbox-community/gruvbox')
 
 vim.call('plug#end')

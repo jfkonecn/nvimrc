@@ -24,7 +24,8 @@ end
 
 local path_sep = get_path_separator()
 local os_path = is_win() and "windows" or "linux"
-local lsps_path = script_path() .. "lsps" .. path_sep .. os_path .. path_sep
+local lsps_path = vim.fn.stdpath("data") .. path_sep .. "mason" .. path_sep .. "packages"  .. path_sep
+
 
 require'lspconfig'.omnisharp.setup {
     -- cmd = { "dotnet", "./lsps/omnisharp/OmniSharp.dll" },
@@ -72,7 +73,6 @@ require'lspconfig'.sumneko_lua.setup {
       runtime = {
         -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
         version = 'LuaJIT',
-        plugin = lsps_path .. 'lua-language-server' .. path_sep .. "bin" .. path_sep .. 'lua-language-server'
       },
       diagnostics = {
         -- Get the language server to recognize the `vim` global
@@ -89,3 +89,5 @@ require'lspconfig'.sumneko_lua.setup {
     },
   },
 }
+
+require'lspconfig'.grammarly.setup{}

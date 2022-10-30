@@ -14,5 +14,8 @@ vim.opt.scrolloff = 8
 
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "80"
+vim.opt.showmode = true
 -- vim.opt.spell = true
 -- vim.opt.spelllang = "en"
+--
+vim.cmd("colorscheme gruvbox")
