@@ -12,3 +12,10 @@ nvim
 # inside nvim
 # run :PlugInstall
 ```
+
+
+# Commands I forget
+1. Run shell command
+```
+:! <you shell command>
+```

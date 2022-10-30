@@ -9,6 +9,8 @@ local Plug = vim.fn['plug#']
 vim.call('plug#begin')
 
 -- language server
+-- https://github.com/neovim/nvim-lspconfig
+-- https://github.com/neovim/nvim-lspconfig/blob/master/doc/server_configurations.md
 Plug('neovim/nvim-lspconfig')
 
 -- dotnet
