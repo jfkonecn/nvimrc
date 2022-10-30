@@ -19,3 +19,5 @@ vim.opt.showmode = true
 -- vim.opt.spelllang = "en"
 --
 vim.cmd("colorscheme gruvbox")
+
+require'nvim-treesitter.configs'.setup{highlight={enable=true}} 

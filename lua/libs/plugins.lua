@@ -22,8 +22,16 @@ Plug('nvim-telescope/telescope.nvim', { tag = '0.1.0' })
 Plug('williamboman/mason.nvim')
 
 
-Plug('morhetz/gruvbox')
-
+-- theme
 Plug('gruvbox-community/gruvbox')
+
+-- is a parser generator tool and an incremental parsing library
+Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate'})
+
+-- git manager
+Plug('tpope/vim-fugitive')
+
+-- look into
+-- Plug('mbbill/undotree')
 
 vim.call('plug#end')
