@@ -13,17 +13,7 @@ local function get_path_separator()
   return '/'
 end
 
-
-local function script_path()                                       
-  local str = debug.getinfo(2, 'S').source:sub(2)                  
-  if is_win() then                                                 
-    str = str:gsub('/', '\\')                                      
-  end                                                              
-  return str:match('(.*' .. get_path_separator() .. ')')           
-end
-
 local path_sep = get_path_separator()
-local os_path = is_win() and "windows" or "linux"
 local lsps_path = vim.fn.stdpath("data") .. path_sep .. "mason" .. path_sep .. "packages"  .. path_sep
 
 

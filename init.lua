@@ -4,5 +4,5 @@ require("libs.plugins")
 require("libs.mason")
 require("libs.set")
 require("libs.lsps")
-
+require("libs.remaps")
 
