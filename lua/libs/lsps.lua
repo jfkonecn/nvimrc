@@ -23,7 +23,8 @@ local function script_path()
 end
 
 local path_sep = get_path_separator()
-local lsps_path = script_path() .. "lsps" .. path_sep
+local os_path = is_win() and "windows" or "linux"
+local lsps_path = script_path() .. "lsps" .. path_sep .. os_path .. path_sep
 
 require'lspconfig'.omnisharp.setup {
     -- cmd = { "dotnet", "./lsps/omnisharp/OmniSharp.dll" },
@@ -65,5 +66,26 @@ require'lspconfig'.omnisharp.setup {
     analyze_open_documents_only = false,
 }
 
-
-require'lspconfig'.luau_lsp.setup{}
+require'lspconfig'.sumneko_lua.setup {
+  settings = {
+    Lua = {
+      runtime = {
+        -- Tell the language server which version of Lua you're using (most likely LuaJIT in the case of Neovim)
+        version = 'LuaJIT',
+        plugin = lsps_path .. 'lua-language-server' .. path_sep .. "bin" .. path_sep .. 'lua-language-server'
+      },
+      diagnostics = {
+        -- Get the language server to recognize the `vim` global
+        globals = {'vim'},
+      },
+      workspace = {
+        -- Make the server aware of Neovim runtime files
+        library = vim.api.nvim_get_runtime_file("", true),
+      },
+      -- Do not send telemetry data containing a randomized but unique identifier
+      telemetry = {
+        enable = false,
+      },
+    },
+  },
+}
