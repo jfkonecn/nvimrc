@@ -2,7 +2,7 @@
 
 # Installation
 1. Clone this repo to ~/.config/nvim
-2. Install lanaguage servers
+2. Install language servers
 ```sh
 
 ```
@@ -19,3 +19,16 @@ nvim
 ```
 :! <you shell command>
 ```
+
+# Spell Checking
+https://neovim.io/doc/user/spell.html#spell-syntax
+
+// get suggestions for misspelled words
+Zl
+
+// jump to next misspelled word
+ZN
+ZP
+
+
+

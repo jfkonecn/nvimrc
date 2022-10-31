@@ -1,6 +1,6 @@
--- To install 
+-- To install
 -- :PlugInstall
--- To Remove, first remove plugin from config 
+-- To Remove, first remove plugin from config
 -- :PlugClean
 -- lua syntax
 -- https://dev.to/vonheikemen/neovim-using-vim-plug-in-lua-3oom
@@ -33,5 +33,7 @@ Plug('tpope/vim-fugitive')
 
 -- look into
 -- Plug('mbbill/undotree')
+
+Plug('kamykn/spelunker.vim')
 
 vim.call('plug#end')

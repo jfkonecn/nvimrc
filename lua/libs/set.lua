@@ -1,4 +1,5 @@
 vim.opt.relativenumber = true
+vim.opt.number = true
 
 vim.opt.tabstop=4
 vim.opt.softtabstop=4
@@ -15,9 +16,8 @@ vim.opt.scrolloff = 8
 vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "80"
 vim.opt.showmode = true
--- vim.opt.spell = true
--- vim.opt.spelllang = "en"
+vim.opt.linebreak = false
 --
 vim.cmd("colorscheme gruvbox")
 
-require'nvim-treesitter.configs'.setup{highlight={enable=true}} 
+require'nvim-treesitter.configs'.setup{highlight={enable=true}}
