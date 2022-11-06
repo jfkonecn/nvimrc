@@ -42,6 +42,7 @@ Plug('tpope/vim-fugitive')
 Plug('kamykn/spelunker.vim')
 
 -- lint manager
-Plug('mfussenegger/nvim-lint')
+-- Plug('mfussenegger/nvim-lint')
+Plug('jose-elias-alvarez/null-ls.nvim')
 
 vim.call('plug#end')

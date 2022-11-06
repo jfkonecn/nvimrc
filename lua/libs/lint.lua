@@ -1,17 +1,58 @@
-require('lint').linters_by_ft = {
-  markdown = {'vale',},
-  javascript = { 'eslint' },
-  javascriptreact = { 'eslint' },
-  typescript = { 'eslint' },
-  typescriptreact = { 'eslint' },
-  vue = { 'eslint' },
-  svelte = { 'eslint' },
-  astro = { 'eslint' }
-}
+-- require('lint').linters_by_ft = {
+--   markdown = {'vale',},
+--   javascript = { 'eslint' },
+--   javascriptreact = { 'eslint' },
+--   typescript = { 'eslint' },
+--   typescriptreact = { 'eslint' },
+--   vue = { 'eslint' },
+--   svelte = { 'eslint' },
+--   astro = { 'eslint' }
+-- }
+--
+--
+-- vim.api.nvim_create_autocmd({ "BufWritePost" }, {
+--   callback = function()
+--     require("lint").try_lint()
+--   end,
+-- })
+--
 
+local null_ls = require("null-ls")
 
-vim.api.nvim_create_autocmd({ "BufWritePost" }, {
-  callback = function()
-    require("lint").try_lint()
-  end,
+local lsp_formatting = function(bufnr)
+    vim.lsp.buf.format({
+        filter = function(client)
+            -- apply whatever logic you want (in this example, we'll only use null-ls)
+            return client.name == "null-ls"
+        end,
+        bufnr = bufnr,
+    })
+end
+
+local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
+null_ls.setup({
+    sources = {
+        null_ls.builtins.formatting.stylua,
+        null_ls.builtins.diagnostics.eslint,
+        null_ls.builtins.formatting.eslint,
+        null_ls.builtins.formatting.csharpier,
+        null_ls.builtins.formatting.rustfmt,
+        -- null_ls.builtins.completion.spell,
+    },
+    on_attach = function(client, bufnr)
+        if client.supports_method("textDocument/formatting") then
+            vim.api.nvim_clear_autocmds({ group = augroup, buffer = bufnr })
+            vim.api.nvim_create_autocmd("BufWritePre", {
+                group = augroup,
+                buffer = bufnr,
+                callback = function()
+                    -- vim.lsp.buf.format({ bufnr = bufnr })
+                    lsp_formatting(bufnr)
+
+                end,
+            })
+        end
+    end,
 })
+
+
