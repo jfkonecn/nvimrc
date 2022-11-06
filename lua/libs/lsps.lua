@@ -191,3 +191,9 @@ cmp.setup {
     { name = 'luasnip' },
   },
 }
+
+
+-- tailwindcss
+require'lspconfig'.tailwindcss.setup{}
+
+

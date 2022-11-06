@@ -41,4 +41,7 @@ Plug('tpope/vim-fugitive')
 -- spell checker
 Plug('kamykn/spelunker.vim')
 
+-- lint manager
+Plug('mfussenegger/nvim-lint')
+
 vim.call('plug#end')
