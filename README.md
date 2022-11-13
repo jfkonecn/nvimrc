@@ -29,6 +29,15 @@ nvim
 ```
 :help terminal-emulator
 ```
+5. Adding files
+```
+:Explore
+```
+- j,k move up and down
+- Enter to enter a sub-directory
+- - to go up a directory
+- d to create a directory
+- % to create a file
 
 
 # Spell Checking
