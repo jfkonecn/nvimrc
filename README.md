@@ -38,6 +38,7 @@ nvim
 - - to go up a directory
 - d to create a directory
 - % to create a file
+- more [info](https://dev.to/asyraf/how-to-make-a-new-file-or-directory-in-vim-553f)
 
 
 # Spell Checking
