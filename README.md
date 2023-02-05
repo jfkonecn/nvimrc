@@ -1,4 +1,7 @@
 # Installation
+## Requirements
+- neovim 0.9
+## Cloning
 1. Clone this repo to ~/.config/nvim
 2. Install language servers
 ```sh
