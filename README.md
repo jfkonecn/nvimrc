@@ -42,6 +42,33 @@ nvim
 - d to create a directory
 - % to create a file
 - more [info](https://dev.to/asyraf/how-to-make-a-new-file-or-directory-in-vim-553f)
+6. Resize windows
+Window resizing
+You can use the :resize command or its shortcut :res to change the height of the window. To change the height to 60 rows, use:
+
+```
+:resize 60
+```
+
+You can also change the height in increments. To change the height by increments of 5, use:
+
+```
+:res +3.5
+:res 4
+```
+
+You can use :vertical resize to change the width of the current window. To change the width to 80 columns, use:
+
+```
+:vertical resize 80
+```
+
+You can also change the width in increments. To change the width by increments of 5, use:
+
+```
+:vertical resize +5
+:vertical resize -5
+```
 
 
 # Spell Checking
@@ -66,3 +93,7 @@ ZP
 # Modifying VimRc
 :options  // gives all config options
 so % // loads script
+
+# Comment out lines
+[count]<leader>cc comment out
+[count]<leader>cu uncomment

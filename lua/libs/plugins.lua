@@ -45,4 +45,7 @@ Plug('kamykn/spelunker.vim')
 -- Plug('mfussenegger/nvim-lint')
 Plug('jose-elias-alvarez/null-ls.nvim')
 
+-- comment out lines
+Plug('preservim/nerdcommenter')
+
 vim.call('plug#end')
