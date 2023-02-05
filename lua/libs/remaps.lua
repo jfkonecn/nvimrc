@@ -14,5 +14,9 @@ end
 
 
 vim.g.mapleader = " "
+
+-- do grep telescope search
 map("n", "<leader>ps", ":lua require('telescope.builtin').grep_string({ search = vim.fn.input(\"Grep For > \")})<CR>")
 
+-- hide search results
+map("n", "<leader>hs", ":noh<CR>")
