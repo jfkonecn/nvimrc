@@ -59,3 +59,7 @@ ZP
 - tailwindcss-language-server
 - typescript-language-server
 
+
+# Modifying VimRc
+:options  // gives all config options
+so % // loads script

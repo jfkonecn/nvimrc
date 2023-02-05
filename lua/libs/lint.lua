@@ -46,9 +46,9 @@ null_ls.setup({
                 group = augroup,
                 buffer = bufnr,
                 callback = function()
-                    -- vim.lsp.buf.format({ bufnr = bufnr })
-                    lsp_formatting(bufnr)
-
+                    vim.lsp.buf.format({ bufnr = bufnr })
+                    -- works for nvim 0.9
+                    -- lsp_formatting(bufnr)
                 end,
             })
         end
