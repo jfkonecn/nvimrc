@@ -70,6 +70,18 @@ You can also change the width in increments. To change the width by increments o
 :vertical resize -5
 ```
 
+Telescope
+
+find file
+```
+<leader>ff
+```
+
+grep file
+```
+<leader>fg
+```
+
 
 # Spell Checking
 https://neovim.io/doc/user/spell.html#spell-syntax
@@ -99,3 +111,6 @@ so % // loads script
 # Comment out lines
 [count]<leader>cc comment out
 [count]<leader>cu uncomment
+
+# Run workspace lua script
+Add .nvimrc.lua file

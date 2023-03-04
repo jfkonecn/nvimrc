@@ -48,4 +48,8 @@ Plug('jose-elias-alvarez/null-ls.nvim')
 -- comment out lines
 Plug('preservim/nerdcommenter')
 
+-- don't need on 0.9.0 and beyond
+Plug('MunifTanjim/exrc.nvim')
+
+
 vim.call('plug#end')
