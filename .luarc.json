@@ -1,0 +1,26 @@
+{
+    "workspace.library": [
+        "/home/jfkonecn/.config/nvim",
+        "/home/jfkonecn/.local/share/nvim/plugged/nvim-lspconfig",
+        "/home/jfkonecn/.local/share/nvim/plugged/nvim-cmp",
+        "/home/jfkonecn/.local/share/nvim/plugged/cmp-nvim-lsp",
+        "/home/jfkonecn/.local/share/nvim/plugged/cmp_luasnip",
+        "/home/jfkonecn/.local/share/nvim/plugged/LuaSnip",
+        "/home/jfkonecn/.local/share/nvim/plugged/plenary.nvim",
+        "/home/jfkonecn/.local/share/nvim/plugged/telescope.nvim",
+        "/home/jfkonecn/.local/share/nvim/plugged/mason.nvim",
+        "/home/jfkonecn/.local/share/nvim/plugged/gruvbox",
+        "/home/jfkonecn/.local/share/nvim/plugged/nvim-treesitter",
+        "/home/jfkonecn/.local/share/nvim/plugged/vim-fugitive",
+        "/home/jfkonecn/.local/share/nvim/plugged/spelunker.vim",
+        "/home/jfkonecn/.local/share/nvim/plugged/null-ls.nvim",
+        "/home/jfkonecn/.local/share/nvim/plugged/nerdcommenter",
+        "/home/jfkonecn/.local/share/nvim/site",
+        "/usr/share/nvim/runtime",
+        "/lib/nvim",
+        "/home/jfkonecn/.local/share/nvim/plugged/cmp-nvim-lsp/after",
+        "/home/jfkonecn/.local/share/nvim/plugged/cmp_luasnip/after",
+        "/home/jfkonecn/.local/share/nvim/plugged/spelunker.vim/after",
+        "${3rd}/luassert/library"
+    ]
+}

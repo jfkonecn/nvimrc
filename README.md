@@ -88,6 +88,7 @@ ZP
 - rust-analyzer
 - tailwindcss-language-server
 - typescript-language-server
+- cssls
 
 
 # Modifying VimRc
