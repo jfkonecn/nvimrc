@@ -82,6 +82,14 @@ grep file
 <leader>fg
 ```
 
+yank file to system clipboard
+1. Enter visual mode and hightlight the text you want
+2. enter this command
+```
+"+y
+```
+- Make sure you have xclip installed on linux
+
 
 # Spell Checking
 https://neovim.io/doc/user/spell.html#spell-syntax
