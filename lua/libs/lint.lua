@@ -33,8 +33,21 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
     sources = {
         null_ls.builtins.formatting.stylua,
-        null_ls.builtins.diagnostics.eslint,
-        null_ls.builtins.formatting.eslint,
+        null_ls.builtins.diagnostics.eslint.with({
+            condition = function(utils)
+                return utils.root_has_file({ ".eslint" })
+            end,
+        }),
+        null_ls.builtins.formatting.eslint.with({
+        condition = function(utils)
+                return utils.root_has_file({ ".eslint" })
+            end,
+        }),
+        null_ls.builtins.formatting.prettier.with({
+        condition = function(utils)
+                return utils.root_has_file({ ".prettierrc" })
+            end,
+        }),
         null_ls.builtins.formatting.csharpier,
         null_ls.builtins.formatting.rustfmt,
         -- null_ls.builtins.completion.spell,
