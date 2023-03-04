@@ -89,6 +89,7 @@ ZP
 - tailwindcss-language-server
 - typescript-language-server
 - cssls
+- htmlls
 
 
 # Modifying VimRc
