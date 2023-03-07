@@ -2,6 +2,14 @@
 ## Requirements
 - neovim 0.9
 - [vim-plug](https://github.com/junegunn/vim-plug)
+- zig (for windows only)
+Note on windows you have to install visual studio with the c++ complier and then run a powershell instance through visual studio
+    - using [scoop...](https://scoop.sh/)
+```
+scoop install zig
+
+```
+
 ## Cloning
 1. Clone this repo to
 - On linux ~/.config/nvim
@@ -123,6 +131,7 @@ ZP
 - grammarly-languageserver
 - lua-language-server
 - omnisharp
+- csharpier
 - rust-analyzer
 - tailwindcss-language-server
 - typescript-language-server
