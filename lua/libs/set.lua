@@ -16,6 +16,8 @@ vim.opt.signcolumn = "yes"
 vim.opt.colorcolumn = "80"
 vim.opt.showmode = true
 vim.opt.linebreak = false
+vim.opt.ignorecase = true
+vim.opt.smartcase = true
 --
 vim.cmd("colorscheme gruvbox")
 
