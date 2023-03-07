@@ -25,6 +25,10 @@ TSInstall html css c_sharp javascript typescript tsx lua
 
 
 # Commands I forget
+Debug Plugins
+```
+:checkhealth
+```
 1. Run shell command
 ```
 :! <you shell command>
