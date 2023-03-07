@@ -52,9 +52,4 @@ Plug('preservim/nerdcommenter')
 Plug('MunifTanjim/exrc.nvim')
 
 
-if vim.fn.has('win32') then
-    Plug('BurntSushi/ripgrep')
-    Plug('sharkdp/fd')
-end
-
 vim.call('plug#end')

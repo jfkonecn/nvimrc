@@ -1,14 +1,21 @@
 # Installation
+## clone to this location
+- %USERPROFILE%\AppData\Local\nvim (on windows)
+- ~/.config/nvim (on linux)
+
 ## Requirements
 - neovim 0.9
 - [vim-plug](https://github.com/junegunn/vim-plug)
 - zig (for windows only)
 Note on windows you have to install visual studio with the c++ complier and then run a powershell instance through visual studio
     - using [scoop...](https://scoop.sh/)
+check if %USERPROFILE%\scoop\shims is in your path
 ```
 scoop install zig
-
+scoop install ripgrep
 ```
+check if %USERPROFILE%\scoop\apps\ripgrep\13.0.0 is in your path
+check if %USERPROFILE%\scoop\apps\zig\0.10.1 is in your path
 
 ## Cloning
 1. Clone this repo to
@@ -137,6 +144,7 @@ ZP
 - typescript-language-server
 - cssls
 - htmlls
+- stylua
 
 
 # Modifying VimRc
