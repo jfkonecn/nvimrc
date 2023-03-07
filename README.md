@@ -5,7 +5,7 @@
 1. Clone this repo to ~/.config/nvim
 2. Install language servers
 ```sh
-
+:Mason
 ```
 3. Install plugins
 ```sh
@@ -89,6 +89,11 @@ yank file to system clipboard
 "+y
 ```
 - Make sure you have xclip installed on linux
+
+turn off hightlighting from search
+```
+:noh
+```
 
 
 # Spell Checking
