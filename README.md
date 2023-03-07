@@ -1,17 +1,26 @@
 # Installation
 ## Requirements
 - neovim 0.9
+- [vim-plug](https://github.com/junegunn/vim-plug)
 ## Cloning
-1. Clone this repo to ~/.config/nvim
+1. Clone this repo to
+- On linux ~/.config/nvim
+- On windows ~/AppData/Local/nvim
 2. Install language servers
 ```sh
 :Mason
 ```
 3. Install plugins
-```sh
-nvim
-# inside nvim
-# run :PlugInstall
+- you'll have to run the installation twice to get it to work
+```
+:PlugInstall
+```
+
+4. Install Tree Sitter stuff
+
+- Note on windows you have to install visual studio with the c++ complier and then run a powershell instance through visual studio
+```
+TSInstall html css c_sharp javascript typescript tsx lua
 ```
 
 
