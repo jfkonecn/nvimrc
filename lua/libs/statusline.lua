@@ -1,9 +1,7 @@
 local cmd = vim.cmd
 
-
-
-if vim.fn.has('win32') then
-    cmd [[
+if vim.loop.os_uname().sysname == "Windows" then
+	cmd([[
     function! GitBranch()
       return system("git rev-parse --abbrev-ref HEAD 2>NUL")
     endfunction
@@ -27,9 +25,9 @@ if vim.fn.has('win32') then
     set statusline+=\ %p%%
     set statusline+=\ %l:%c
     set statusline+=\
-    ]]
+    ]])
 else
-    cmd [[
+	cmd([[
     function! GitBranch()
       return system("git rev-parse --abbrev-ref HEAD 2>/dev/null | tr -d '\n'")
     endfunction
@@ -53,5 +51,5 @@ else
     set statusline+=\ %p%%
     set statusline+=\ %l:%c
     set statusline+=\
-    ]]
+    ]])
 end
