@@ -35,7 +35,12 @@ null_ls.setup({
 		null_ls.builtins.formatting.stylua,
 		null_ls.builtins.diagnostics.eslint.with({
 			condition = function(utils)
-				return utils.root_has_file({ ".eslint" })
+				return utils.root_has_file({ ".eslint", ".eslintrc.json" })
+			end,
+		}),
+		null_ls.builtins.formatting.eslint.with({
+			condition = function(utils)
+				return utils.root_has_file({ ".eslint", ".eslintrc.json" })
 			end,
 		}),
 		null_ls.builtins.formatting.prettier.with({
