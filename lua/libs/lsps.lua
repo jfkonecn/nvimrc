@@ -245,3 +245,5 @@ htmlCapabilities.textDocument.completion.completionItem.snippetSupport = true
 require("lspconfig").html.setup({
 	capabilities = htmlCapabilities,
 })
+
+require("lspconfig").jdtls.setup({})
