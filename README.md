@@ -184,8 +184,10 @@ Debug Plugins
 
 ## Modifying VimRc
 
-:options  // gives all config options
-so % // loads script
+    ```
+    :options  // gives all config options
+    so % // loads script
+    ```
 
 ## Comment out lines
 
