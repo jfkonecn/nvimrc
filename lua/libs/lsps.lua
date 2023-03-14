@@ -124,11 +124,6 @@ require("lspconfig").lua_ls.setup({
 	flags = lsp_flags,
 })
 
-require("lspconfig").grammarly.setup({
-	on_attach = on_attach,
-	flags = lsp_flags,
-})
-
 require("lspconfig").tsserver.setup({})
 
 local capabilities = require("cmp_nvim_lsp").default_capabilities()
