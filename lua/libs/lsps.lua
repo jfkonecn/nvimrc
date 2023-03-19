@@ -189,6 +189,7 @@ cmp.setup({
 		{ name = "luasnip" },
 		{ name = "nvim_lsp_signature_help" },
 	},
+	on_attach = on_attach,
 })
 
 -- tailwindcss
@@ -223,6 +224,7 @@ require("lspconfig").tailwindcss.setup({
 		"postcss.config.ts",
 		"windi.config.ts"
 	),
+	on_attach = on_attach,
 })
 
 --Enable (broadcasting) snippet capability for completion
@@ -231,6 +233,7 @@ cssCapabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("lspconfig").cssls.setup({
 	capabilities = cssCapabilities,
+	on_attach = on_attach,
 })
 
 --Enable (broadcasting) snippet capability for completion
@@ -239,6 +242,13 @@ htmlCapabilities.textDocument.completion.completionItem.snippetSupport = true
 
 require("lspconfig").html.setup({
 	capabilities = htmlCapabilities,
+	on_attach = on_attach,
 })
 
-require("lspconfig").jdtls.setup({})
+require("lspconfig").jdtls.setup({
+	on_attach = on_attach,
+})
+
+require("lspconfig").ltex.setup({
+	on_attach = on_attach,
+})
