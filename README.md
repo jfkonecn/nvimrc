@@ -181,6 +181,8 @@ Debug Plugins
     - stylua
     - tailwindcss-language-server
     - typescript-language-server
+    - pylint
+    - pyright
 
 ## Modifying VimRc
 

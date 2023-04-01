@@ -49,6 +49,7 @@ null_ls.setup({
 			end,
 		}),
 		null_ls.builtins.diagnostics.markdownlint,
+		null_ls.builtins.diagnostics.pylint,
 		null_ls.builtins.formatting.csharpier,
 		null_ls.builtins.formatting.rustfmt,
 	},
