@@ -201,3 +201,7 @@ Debug Plugins
 ## Run workspace lua script
 
 Add .nvimrc.lua file
+
+## Install Co-Pilot
+
+[Click this link](https://github.com/github/copilot.vim)
